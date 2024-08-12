@@ -9,7 +9,7 @@ source:
   sha256: 09120c9867ce7f2081d6aaa1775386b98c2f2f246135761aae47d81f58685b9c
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('libgcrypt') }}
@@ -26,6 +26,7 @@ requirements:
 test:
   commands:
     - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}  # [linux]
+    - libgcrypt-config --help
 
 about:
   home: https://gnupg.org/software/index.html
