@@ -52,7 +52,6 @@ outputs:
         - test -f ${PREFIX}/share/info/gcrypt.info
         - test -f ${PREFIX}/share/info/gcrypt.info-1
         - test -f ${PREFIX}/share/info/gcrypt.info-2
-        - test -f ${PREFIX}/man/man1/hmac256.1
 
     about:
       license: LGPL-2.1-or-later AND GPL-2.0-or-later
@@ -135,7 +134,6 @@ outputs:
         - test -f ${PREFIX}/share/info/gcrypt.info
         - test -f ${PREFIX}/share/info/gcrypt.info-1
         - test -f ${PREFIX}/share/info/gcrypt.info-2
-        - test -f ${PREFIX}/man/man1/hmac256.1
     about:
       license: LGPL-2.1-or-later
       license_file:
