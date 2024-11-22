@@ -44,9 +44,9 @@ outputs:
         - test -f ${PREFIX}/bin/hmac256
         - test -f ${PREFIX}/bin/mpicalc
         - test -f ${PREFIX}/include/gcrypt.h
-        - test -f ${PREFIX}/lib/libgcrypt.20${SHLIB_EXT} # [osx]
-        - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}.20 # [linux]
-        - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}.20.5.0 # [linux]
+        - test -f ${PREFIX}/lib/libgcrypt.20${SHLIB_EXT}  # [osx]
+        - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}.20  # [linux]
+        - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}.20.5.0  # [linux]
         - test -f ${PREFIX}/lib/pkgconfig/libgcrypt.pc
         - test -f ${PREFIX}/share/aclocal/libgcrypt.m4
         - test -f ${PREFIX}/share/info/gcrypt.info
@@ -94,11 +94,12 @@ outputs:
         - {{ stdlib('c') }}
     test:
       commands:
-        - ! test -f ${PREFIX}/bin/dumpsexp
-        - ! test -f ${PREFIX}/bin/hmac256
-        - ! test -f ${PREFIX}/bin/mpicalc
-        - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}
-    about:
+        - test ! -f ${PREFIX}/bin/dumpsexp
+        - test ! -f ${PREFIX}/bin/hmac256
+        - test ! -f ${PREFIX}/bin/mpicalc
+        - test -f ${PREFIX}/lib/libgcrypt.20${SHLIB_EXT}  # [osx]
+        - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}.20  # [linux]
+        - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}.20.5.0  # [linux]    about:
       license: LGPL-2.1-or-later
       license_file:
         - COPYING.LIB
@@ -118,13 +119,13 @@ outputs:
         - {{ pin_subpackage('libgcrypt-lib', exact=true) }}
     test:
       commands:
-        - ! test -f ${PREFIX}/bin/dumpsexp
-        - ! test -f ${PREFIX}/bin/hmac256
-        - ! test -f ${PREFIX}/bin/mpicalc
+        - test ! -f ${PREFIX}/bin/dumpsexp
+        - test ! -f ${PREFIX}/bin/hmac256
+        - test ! -f ${PREFIX}/bin/mpicalc
         - test -f ${PREFIX}/include/gcrypt.h
-        - test -f ${PREFIX}/lib/libgcrypt.20${SHLIB_EXT} # [osx]
-        - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}.20 # [linux]
-        - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}.20.5.0 # [linux]
+        - test -f ${PREFIX}/lib/libgcrypt.20${SHLIB_EXT}  # [osx]
+        - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}.20  # [linux]
+        - test -f ${PREFIX}/lib/libgcrypt${SHLIB_EXT}.20.5.0  # [linux]
         - test -f ${PREFIX}/lib/pkgconfig/libgcrypt.pc
         - test -f ${PREFIX}/share/aclocal/libgcrypt.m4
         - test -f ${PREFIX}/share/info/gcrypt.info
