@@ -15,12 +15,12 @@ build:
     - {{ pin_subpackage('libgcrypt') }}
 
 requirements:
-  host:
-    - libgpg-error
   build:
     - make
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
+  host:
+    - libgpg-error
 
 outputs:
   - name: libgcrypt
@@ -87,11 +87,11 @@ outputs:
       run_exports:
         - {{ pin_subpackage('libgcrypt-lib') }}
     requirements:
-      host:
-        - libgpg-error
       build:
         - {{ compiler('c') }}
         - {{ stdlib('c') }}
+      host:
+        - libgpg-error
     test:
       commands:
         - test ! -f ${PREFIX}/bin/dumpsexp
