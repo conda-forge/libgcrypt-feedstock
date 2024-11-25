@@ -1,13 +1,45 @@
-About libgcrypt-feedstock
-=========================
+About libgcrypt-split-feedstock
+===============================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libgcrypt-feedstock/blob/main/LICENSE.txt)
+
+
+About libgcrypt-split
+---------------------
 
 Home: https://gnupg.org/software/index.html
 
 Package license: LGPL-2.1-or-later AND GPL-2.0-or-later
 
 Summary: a general purpose cryptographic library originally based on code from GnuPG.
+
+About libgcrypt-lib
+-------------------
+
+
+
+Package license: LGPL-2.1-or-later
+
+About libgcrypt-devel
+---------------------
+
+
+
+Package license: LGPL-2.1-or-later
+
+About libgcrypt-tools
+---------------------
+
+
+
+Package license: GPL-2.0-or-later
+
+About libgcrypt
+---------------
+
+
+
+Package license: LGPL-2.1-or-later AND GPL-2.0-or-later
 
 Current build status
 ====================
@@ -75,27 +107,30 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-libgcrypt-green.svg)](https://anaconda.org/conda-forge/libgcrypt) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgcrypt.svg)](https://anaconda.org/conda-forge/libgcrypt) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgcrypt.svg)](https://anaconda.org/conda-forge/libgcrypt) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgcrypt.svg)](https://anaconda.org/conda-forge/libgcrypt) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libgcrypt--devel-green.svg)](https://anaconda.org/conda-forge/libgcrypt-devel) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgcrypt-devel.svg)](https://anaconda.org/conda-forge/libgcrypt-devel) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgcrypt-devel.svg)](https://anaconda.org/conda-forge/libgcrypt-devel) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgcrypt-devel.svg)](https://anaconda.org/conda-forge/libgcrypt-devel) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libgcrypt--lib-green.svg)](https://anaconda.org/conda-forge/libgcrypt-lib) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgcrypt-lib.svg)](https://anaconda.org/conda-forge/libgcrypt-lib) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgcrypt-lib.svg)](https://anaconda.org/conda-forge/libgcrypt-lib) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgcrypt-lib.svg)](https://anaconda.org/conda-forge/libgcrypt-lib) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libgcrypt--tools-green.svg)](https://anaconda.org/conda-forge/libgcrypt-tools) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libgcrypt-tools.svg)](https://anaconda.org/conda-forge/libgcrypt-tools) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libgcrypt-tools.svg)](https://anaconda.org/conda-forge/libgcrypt-tools) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libgcrypt-tools.svg)](https://anaconda.org/conda-forge/libgcrypt-tools) |
 
-Installing libgcrypt
-====================
+Installing libgcrypt-split
+==========================
 
-Installing `libgcrypt` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `libgcrypt-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libgcrypt` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `libgcrypt, libgcrypt-devel, libgcrypt-lib, libgcrypt-tools` can be installed with `conda`:
 
 ```
-conda install libgcrypt
+conda install libgcrypt libgcrypt-devel libgcrypt-lib libgcrypt-tools
 ```
 
 or with `mamba`:
 
 ```
-mamba install libgcrypt
+mamba install libgcrypt libgcrypt-devel libgcrypt-lib libgcrypt-tools
 ```
 
 It is possible to list all of the versions of `libgcrypt` available on your platform with `conda`:
@@ -165,17 +200,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating libgcrypt-feedstock
-============================
+Updating libgcrypt-split-feedstock
+==================================
 
-If you would like to improve the libgcrypt recipe or build a new
+If you would like to improve the libgcrypt-split recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/libgcrypt-feedstock are
+Note that all branches in the conda-forge/libgcrypt-split-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
