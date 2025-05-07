@@ -1,4 +1,4 @@
-{% set version = "1.11.0" %}
+{% set version = "1.11.1" %}
 
 package:
   name: libgcrypt-split
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-{{ version }}.tar.bz2
-  sha256: 09120c9867ce7f2081d6aaa1775386b98c2f2f246135761aae47d81f58685b9c
+  sha256: 24e91c9123a46c54e8371f3a3a2502f1198f2893fbfbf59af95bc1c21499b00e
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('libgcrypt') }}
@@ -66,7 +66,7 @@ outputs:
       host:
         - {{ pin_subpackage('libgcrypt-devel', exact=true) }}
         - {{ pin_subpackage('libgcrypt-lib', exact=true) }}
-        -  libgpg-error
+        - libgpg-error
       run:
         - {{ pin_subpackage('libgcrypt-lib', exact=true) }}
     test:
