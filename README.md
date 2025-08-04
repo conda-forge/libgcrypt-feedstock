@@ -13,6 +13,8 @@ Package license: LGPL-2.1-or-later AND GPL-2.0-or-later
 
 Summary: a general purpose cryptographic library originally based on code from GnuPG.
 
+Development: https://dev.gnupg.org/source/libgcrypt/
+
 About libgcrypt
 ---------------
 
