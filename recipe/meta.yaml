@@ -1,4 +1,4 @@
-{% set version = "1.11.1" %}
+{% set version = "1.12.0" %}
 
 package:
   name: libgcrypt-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-{{ version }}.tar.bz2
-  sha256: 24e91c9123a46c54e8371f3a3a2502f1198f2893fbfbf59af95bc1c21499b00e
+  sha256: 0311454e678189bad62a7e9402a9dd793025efff6e7449898616e2fc75e0f4f5
   patches:
     - 793eda7b258a562757b51c96044b103b638f1a63.patch
 
